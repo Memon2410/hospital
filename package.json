@@ -1,0 +1,43 @@
+{
+  "name": "San-Javier",
+  "version": "1.0.0",
+  "description": "Landing page Hospital San Javier",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Memon2410/sanjavier"
+  },
+  "keywords": [
+    "Jade",
+    "SASS",
+    "Typescript",
+    "ts"
+  ],
+  "author": "Memon2410 ~ Guillermo Rodríguez",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.6",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "retyped-jquery.scrollto-tsd-ambient": "^1.4.4-0",
+    "tsify": "^1.0.7",
+    "typescript": "^1.8.10",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0",
+    "gulp-minify-html-2": "^1.0.0"
+  },
+  "dependencies": {
+    "@types/jquery.scrollto": "^1.4.27",
+    "flatpickr": "^4.4.4"
+  }
+}

@@ -1,0 +1,417 @@
+@import 'reset';
+
+/* Vars */
+$green-light: #99E394;
+$green-dark: #185436;
+$red: #ED536A;
+$gray: #ABABAB;
+$white: #FFFFFF;
+$transparent: rgba(255,255,255,0);
+$gradient: linear-gradient(0deg, rgb(24, 84, 54) 1%, rgb(38, 134, 86) 101%);
+
+$altura: 100%;
+
+$tablet: 996px;
+$desktop: 1200px;
+
+/* Mixins */
+@mixin prefix($name, $argument) {
+	-webkit-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	-o-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+}
+
+/* Typography */
+$source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$bold: 700;
+$semi: 600;
+$regular: 400;
+
+.no-select {
+	@include prefix(user-select, none);
+}
+
+/* General
+---------------------------------------------------------- */
+* {
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+html, body {
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: $source;
+    -webkit-overflow-scrolling: touch;
+    background: $white;
+}
+
+h1 {
+    display: none;
+}
+
+small {
+    font-size: 0.7rem;
+    @media screen and (min-width: $tablet) {
+        font-size: 0.8rem;
+    }
+}
+
+/* Header
+---------------------------------------------------------- */
+header {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px;
+    background: $white;
+    z-index: 1;
+
+    @media screen and (min-width: $tablet) {
+        width: 125px;
+        height: 152px;
+        position: absolute;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px;
+        border-bottom-right-radius: 1.5rem;;
+    }
+}
+
+.container-logo {
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    img {
+        height: 45px;
+        @media screen and (min-width: $tablet) {
+            display: block;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background: url(../img/logo.png) no-repeat;
+            width: 80px;
+            height: 121px;
+            padding-left: 80px;
+        }
+    }
+}
+
+/* Wrapper
+---------------------------------------------------------- */
+#wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    min-height: $altura;
+    position: relative;
+
+}
+
+.content {
+    width: 100%;
+    position: relative;
+    padding: 2rem 1rem;
+    background: $gradient;
+
+    @media screen and (min-width: $desktop) {
+        width: 50%;
+        min-height: 100vh;
+        margin-left: 50%;
+        padding: 1.5rem 3rem;
+    }
+
+    p {
+        max-width: 670px;
+        margin: 0 auto;
+        font-size: 1rem;
+        text-align: justify;
+        color: $white;
+        @media screen and (min-width: $tablet) {
+            font-size: 1.45rem;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 1.15rem;
+        }
+        span {
+            font-size: 1.3rem;
+            font-weight: $bold;
+
+            @media screen and (min-width: $tablet) {
+                font-size: 1.45rem;
+            }
+        }
+    }
+    .quote {
+        width: 100%;
+        max-width: 670px;
+        position: relative;
+        padding: 0.75rem 0.5rem 0.25rem;
+        margin: 1rem auto 2rem;
+        background: $green-dark;
+
+        @media screen and (min-width: $desktop) {
+            padding: 0.75rem 1rem 0.25rem;
+        }
+
+        p {
+            color: $green-light;
+            @media screen and (min-width: $desktop) {
+                font-size: 1rem;
+            }
+            span {
+                @media screen and (min-width: $desktop) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+#container-arrow {
+    margin: 0.5rem auto 0;
+    text-align: center;
+}
+
+.note {
+    width: 100%;
+    max-width: 670px;
+    margin: -1rem auto 1rem;
+    font-size: 0.7rem;
+    color: $white;
+}
+
+/* Form
+---------------------------------------------------------- */
+form {
+    width: 100%;
+    max-width: 670px;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: center;
+    color: $white;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 1.25rem;
+    }
+}
+
+input {
+    @include prefix(outline, none);
+    @include prefix(appearance, none);
+}
+
+input[type=text], input[type=email], input[type=tel] {
+    width: 100%;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 0;
+    border: 1px solid #C7C7C7;
+    font-family: $source;
+    font-weight: $semi;
+    background: $white;
+    @media screen and (min-width: $desktop) {
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: $gray;
+}
+::-moz-placeholder {
+    color: $gray;
+}
+:-ms-input-placeholder {
+    color: $gray;
+}
+:-moz-placeholder {
+    color: $gray;
+}
+
+input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+    margin: -1px;
+    position: absolute;
+    padding: 0;
+    left: -1000px;
+    overflow: hidden;
+    clip:  rect(0 0 0 0);
+    border: 0;
+    z-index: -1000;
+}
+
+input[type=checkbox] + label {
+    height: 20px;
+    display: inline-block;
+    padding-left: 30px;
+    line-height: 20px;
+    font-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 1.1rem;
+    }
+}
+
+input[type=checkbox]:checked + label {
+    background-position: 0 -20px;
+}
+
+label {
+    margin: 1rem auto;
+    background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_391ce065f36b1460c4845fa9b5173fba.png);
+    background-size: 20px;
+    @include prefix(user-select, none);
+}
+
+#container-date {
+    width: 100%;
+    position: relative;
+    text-align: left;
+    p {
+        font-weight: 600;
+        margin: 1rem auto;
+    }
+}
+
+.flatpickr {
+    width: 46% !important;
+    display: inline-block;
+    background-image: url(../img/date.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: auto 100% !important;
+    background-position: right center !important;
+}
+
+.flatpickr:last-child {
+    float: right;
+}
+
+#hour {
+    background-image: url(../img/hour.png) !important;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    max-width: 480px;
+    margin: 1rem auto;
+    border: 0;
+    @include prefix(outline, none);
+    border-radius: 25px;
+    font-family: $source;
+    font-size: 1.3rem;
+    font-weight: $semi;
+    color: $white;
+    transition: all 0.5s ease;
+    background: $red;
+
+    &:hover {
+        transition: all 0.5s ease;
+        background: $green-light;
+    }
+}
+
+#footer-form {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    @media screen and (min-width: $desktop) {
+        display: block;
+    }
+}
+
+/* Image Hero
+---------------------------------------------------------- */
+.container-image-hero {
+    width: 100%;
+    height: 342px;
+    position: relative;
+
+    @media screen and (min-width: $tablet) {
+        height: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 50%;
+        height: 100vh;
+        float: left;
+        margin-top: -100vh;
+    }
+}
+
+#image-hero {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;   
+    background-image: url(../img/bg.jpg);
+    background-size: 996px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media screen and (min-width: $tablet) {
+        background-size: 1280px auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        background-size: auto 100vh;
+    }
+}
+
+#tratamiento {
+    width: 100%;
+    height: 510px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(../img/tratamiento.png);
+    background-size: 510px auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    
+    @media screen and (min-width: $tablet) {
+        background-size: 671px auto;
+    }
+}
+
+/* Footer
+---------------------------------------------------------- */
+footer {
+    height: 50px;
+    position: relative;
+    padding: 0.25rem;
+    background: $green-dark;
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    color: $white;
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+#content-footer {
+    max-width: 285px;
+    position: relative;
+    margin: 0 auto;
+    @media screen and (min-width: $tablet) {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+}

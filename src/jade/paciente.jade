@@ -1,0 +1,126 @@
+doctype html
+html(lang='es-MX')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    
+    title Hospital San Javier
+    meta(name='author', content='Hospital San Javier')
+    meta(name='description', content='A veces necesitamos más que sólo medicianas. Hospital San Javier 20 años creando historias')
+
+    meta(name='google-site-verification', content='')
+    meta(name='Copyright', content='Hospital San Javier')
+    
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    
+    link(rel='apple-touch-icon', sizes='57x57', href='assets/img/favicon/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='assets/img/favicon/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='assets/img/favicon/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='assets/img/favicon/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='assets/img/favicon/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='assets/img/favicon/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='assets/img/favicon/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='assets/img/favicon/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='assets/img/favicon/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='assets/img/favicon/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='assets/img/favicon/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='assets/img/favicon/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='assets/img/favicon/favicon-16x16.png')
+    link(rel='manifest', href='assets/img/favicon/manifest.json')
+    meta(name='msapplication-TileImage', content='assets/img/favicon/ms-icon-144x144.png')
+    meta(name='format-detection' content='telephone=no')
+    
+    link(rel='stylesheet', href='assets/css/styles.css')
+    
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:site', content='@hossanjaviergdl')
+    meta(name='twitter:title', content='Hospital San Javier')
+    meta(name='twitter:description', content='A veces necesitamos más que sólo medicianas. Hospital San Javier 20 años creando historias')
+    meta(name='twitter:url', content='http://www.sanjavier.com.mx/')
+    meta(name='twitter:image', content='')
+      
+    meta(property='og:title', content='Hospital San Javier')
+    meta(property='og:description', content='A veces necesitamos más que sólo medicianas. Hospital San Javier 20 años creando historias')
+    meta(property='og:url', content='http://www.sanjavier.com.mx/')
+    meta(property='og:image', content='https://www.facebook.com/SanJavier.Hospital/')
+
+    // Google Tag Manager
+    //script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXXXX');
+    // End Google Tag Manager
+
+  body
+    // Google Tag Manager (noscript)
+    //noscript
+      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX', height='0', width='0', style='display:none;visibility:hidden')
+    // End Google Tag Manager (noscript)
+    
+    header
+        h1 Hospital San Javier | Philips Sonalleve MR-HIFU
+        .container-logo
+            img(src='assets/img/logo_mobile.png' alt='Logo Hospital San Javier')
+
+    #wrapper
+        .content
+            p
+                | Llegó a Hospital San Javier el tratamiento definitivo para miomas sin necesidad de cirugía y con una recuperación de 24 hrs.*
+                br
+                br
+                | Hospital San Javier trae para ti lo más avanzado en tecnología para el tratamiento de miomas, el nuevo equipo Philips Sonalleve MR-HIFU, para un diagnóstico más preciso, tratamiento no invasivo y con una recuperación rápida sin efectos secundarios.**
+            .quote
+                p
+                    | Agenda hoy una cita con un médico experto de Hospital San Javier para descubrir cómo tatar los miomas sin necesidad de cirugía y con una recuperación rápida.
+                #container-arrow
+                    <svg version="1.2" preserveAspectRatio="none" viewBox="0 0 800 800" class="ng-element" data-id="c16907efa6494ccdacb50c82940c66e9" style="opacity: 1; fill: rgb(153, 227, 148); width: 24px; height: 24px;"><g><polygon xmlns:default="http://www.w3.org/2000/svg" id="arrow_x5F_down" points="400,477.6 66.7,181.8 0,264.2 400,618.2 800,264.2 733.3,181.8 " style="fill: rgb(153, 227, 148);"></polygon></g></svg>
+            .note
+                * Tiempo promedio de recuperación en la mayoría de los pacientes. Los tiempos pueden variar dependiendo de cada paciente.
+                br
+                br
+                ** Sin efectos secundarios en el promedio de los pacientes. Sin embargo, las reacciones secundarias dependen del caso de cada paciente como en cualquier tratamiento.
+
+            form
+                input#name(type='text', class='input-form', name='name', max-length='60', placeholder='Nombre completo')
+                input#email(type='email', class='input-form', name='email', max-length='60', placeholder='Correo electrónico')
+                input#phone(type='tel', class='input-form', name='phone', placeholder='Teléfono', size='10', minlength='10', maxlength='10')
+                #container-date
+                    p
+                        | Indicanos el día y hora deseas tu cita               
+                    input#date.flatpickr.flatpickr-input.active(type='text', placeholder='Fecha', readonly='readonly')
+                    input#hour.flatpickr.flatpickr-input.active(type='text', placeholder='Hora', data-id='timePicker', readonly='readonly')
+
+                input#tyc(type='checkbox', name='tyc', checked='checked')
+                label(for='tyc') Acepto los términos y políticas de privacidad
+                button#button AGENDAR
+
+            .footer#footer-form
+                small © 2018 Hospital San Javier Todos los derechos reservados. 
+                    a(href='') Aviso de privacidad
+
+        .container-image-hero
+            #image-hero
+            #tratamiento
+
+        
+        footer.footer
+            #content-footer
+                small © 2018 Hospital San Javier Todos los derechos reservados. 
+                    a(href='') Aviso de privacidad
+        
+
+
+    script(src='https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js')
+    script.
+      WebFont.load({
+        google: {
+          families: ['Source Sans Pro: 400,600,700']
+        }
+      });
+    
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css')
+    script(src='https://cdn.jsdelivr.net/npm/flatpickr')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.4.4/l10n/es.js')
+    script(defer='', src='assets/js/functions.js')
