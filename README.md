@@ -15,14 +15,15 @@ La configuración de módulos y compilación se encuentran en el archivo gulpfil
 
 # Instalación
 
-Instalar módulos de Node
+Después de bajar el proyecto se deben instalar los módulos de Node. [a link](https://nodejs.org/)
+
 
 ```
 npm install
 
 ```
 
-# uso
+# Uso
 
 Compilación de archivos fuentes
 
