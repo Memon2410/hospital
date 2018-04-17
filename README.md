@@ -8,7 +8,6 @@ Landing oficial para Hospital San Javier
 * [Gulp](https://gulpjs.com/)
 * [Jade](http://jade-lang.com/)
 * [SASS](http://sass-lang.com/)
-* [Typescript](https://www.typescriptlang.org/)
 
 
 La configuración de módulos y compilación se encuentran en el archivo gulpfile.js
@@ -16,7 +15,7 @@ La configuración de módulos y compilación se encuentran en el archivo gulpfil
 
 # Instalación
 
-Installar módulos de Node
+Instalar módulos de Node
 
 ```
 npm install
@@ -30,12 +29,11 @@ Compilación de archivos fuentes
 ```
 gulp jade
 gulp sass
-gulp typescript
 
 ```
 
 
-Observar cambios en archivos fuentes: JADE, Typescript y SASS
+Observar cambios en archivos fuentes: JADE y SASS
 
 ```
 gulp watch
@@ -49,13 +47,3 @@ Una opción para correr el proyecto es tener instalado [http-server](https://www
 http-server
 
 ```
-
-
-Minificación de HTML para producción
-
-```
-gulp html
-
-```
-
-
