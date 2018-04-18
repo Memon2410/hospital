@@ -278,8 +278,7 @@ label {
     text-align: left;
     p {
         font-weight: 600;
-        margin: 1rem auto;
-    }
+     }
 }
 
 .flatpickr {
@@ -347,9 +346,7 @@ button {
 
     @media screen and (min-width: $desktop) {
         width: 50%;
-        height: 100vh;
         float: left;
-        margin-top: -100vh;
     }
 }
 

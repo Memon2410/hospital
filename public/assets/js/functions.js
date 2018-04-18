@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var dateBoolean
   var hourBoolean
 
+  var content = document.getElementById('content')
+  var contentHeight = content.offsetHeight
+  var imageHero = document.getElementById('image-hero')
+  var containerImageHero = document.getElementById('container-image-hero')
+
   // Error
   var badAnswer = function(input) {
     input.style.border = '3px solid #ED536A'
@@ -25,6 +30,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var standardInput = function(input) {
     input.style.border = '1px solid #C7C7C7'
+  }
+
+  /* Height image hero
+  ---------------------------------- */
+  var setHeightHero = function(size) {
+    imageHero.style.backgroundSize = 'auto ' + size + 'px'
+    containerImageHero.style.height = size + 'px'
+    containerImageHero.style.marginTop = -size + 'px'
+  }
+
+  var updateHeightImageHero = function() {
+    contentHeight = content.offsetHeight
+    setHeightHero(contentHeight)
   }
 
   /* Validations
@@ -152,5 +170,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
   }
 
+  setTimeout(function(){
+    updateHeightImageHero()
+  }, 100)
+
+  window.onresize = function() {
+    updateHeightImageHero()
+  }
+
   button.addEventListener('click', clickButton)
+
 })
