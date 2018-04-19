@@ -334,16 +334,13 @@ button {
 }
 
 /* Image Hero
----------------------------------------------------------- */
+---------------------------------------------------------- 
+$tablet: 996px;
+$desktop: 1200px;
+*/
 .container-image-hero {
     width: 100%;
-    height: 342px;
     position: relative;
-
-    @media screen and (min-width: $tablet) {
-        height: 450px;
-    }
-
     @media screen and (min-width: $desktop) {
         width: 50%;
         float: left;
@@ -357,17 +354,8 @@ button {
     top: 0;
     left: 0;   
     background-image: url(../img/bg.jpg);
-    background-size: 996px auto;
     background-repeat: no-repeat;
     background-position: center;
-
-    @media screen and (min-width: $tablet) {
-        background-size: 1280px auto;
-    }
-
-    @media screen and (min-width: $desktop) {
-        background-size: auto 100vh;
-    }
 }
 
 #tratamiento {

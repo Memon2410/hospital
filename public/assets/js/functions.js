@@ -35,9 +35,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
   /* Height image hero
   ---------------------------------- */
   var setHeightHero = function(size) {
-    imageHero.style.backgroundSize = 'auto ' + size + 'px'
-    containerImageHero.style.height = size + 'px'
-    containerImageHero.style.marginTop = -size + 'px'
+    console.log(window.innerWidth)
+    if (window.innerWidth < 996) {
+      containerImageHero.style.height = '342px'
+      containerImageHero.style.marginTop = '0'
+      imageHero.style.backgroundSize = '996px auto'
+    } else if (window.innerWidth >= 996 && window.innerWidth < 1200) {
+      containerImageHero.style.height = '450px'
+      containerImageHero.style.marginTop = '0'
+      imageHero.style.backgroundSize = '1280px auto'
+    } else if (window.innerWidth >= 1200) {
+      containerImageHero.style.height = size + 'px'
+      containerImageHero.style.marginTop = -size + 'px'
+      imageHero.style.backgroundSize = 'auto ' + size + 'px'
+    }
   }
 
   var updateHeightImageHero = function() {
